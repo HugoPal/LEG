@@ -1,6 +1,6 @@
 # LEG: Predicting end of larval period for grayling
 
-LEG tool is a modelling approach for lab-raised European Grayling _Thymallus thymallus_ to predict when an individual will end the larval period and it's length at that point. The repository contains the LEGtool, a data folder that your data will go in, and a models folder containing the three models the tool uses.
+LEG tool is a modelling approach for lab-raised European Grayling _Thymallus thymallus_ to predict when an individual will end the larval period and it's length at that point. The repository contains the LEG tool, a data folder that your data will go in, and a models folder containing the three models the tool uses.
 
 Details of the tool are available in Palejowski et al. (_in prep_)
 
