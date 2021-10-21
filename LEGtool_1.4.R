@@ -9,18 +9,19 @@
 ### Data formatting:
 # data must be in format of one row per fish. 
 # The data must contain the following columns: "fish_ID", "incubation", "hatchlength", "hatchvolume", where fish_ID 
-#vis an individual's unique ID, incubation is the number of days an individual took to hatch, hatlength is the 
+# is an individual's unique ID, incubation is the number of days an individual took to hatch, hatchlength is the 
 # length at hatching, and hatchvolume is the yolk sac volume at hatching.
 
 # "fish_ID" must be coded as.character. "incubation", "hatchlength", "hatchvolume" must be as.numeric.
 # An example dataset is given here.
-if(!require(tidyverse)){
-  install.packages("tidyverse")
-  library(tidyverse)
+
+if(!require(tibble)){
+  install.packages("tibble")
+  library(tibble)
 }
-if(!require(ggpubr)){
-  install.packages("ggpubr")
-  library(ggpubr)
+if(!require(readr)){
+  install.packages("readr")
+  library(readr)
 }
 
 tibble("fish_ID" = c(seq(1,5,1)),
