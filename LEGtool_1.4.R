@@ -94,12 +94,12 @@ write.csv(DATAFRAME,
           file = "outputs/DATAFRAME_predicted.csv")
 
 # plot results
-hist_larval_times <- hist(end_of_yolk_sac_period_results$emergence_date, 
+hist(end_of_yolk_sac_period_results$emergence_date, 
                           breaks = seq(min(end_of_yolk_sac_period_results$emergence_date), max(end_of_yolk_sac_period_results$emergence_date), length.out = 7),
                           main = "timing of larval period end",
                           xlab = "days post-fertilisation")
 
-hist_larval_lengths <- hist(end_of_yolk_sac_period_results$emergence_length, 
+hist(end_of_yolk_sac_period_results$emergence_length, 
                             breaks = seq(min(end_of_yolk_sac_period_results$emergence_length), max(end_of_yolk_sac_period_results$emergence_length), length.out = 7),
                             main = "length at larval period end",
                             xlab = "length (mm)")
