@@ -104,14 +104,14 @@ hist_larval_lengths <- hist(end_of_yolk_sac_period_results$emergence_length,
                             main = "length at larval period end",
                             xlab = "length (mm)")
 
-jpeg(file="outputs/histograms_of_predicted_times.png")
+jpeg(file="outputs/histogram_of_predicted_times.png")
 hist(end_of_yolk_sac_period_results$emergence_date, 
      breaks = seq(min(end_of_yolk_sac_period_results$emergence_date), max(end_of_yolk_sac_period_results$emergence_date), length.out = 7),
      main = "timing of larval period end",
      xlab = "days post-fertilisation")
 dev.off()
 
-jpeg(file="outputs/histograms_of_predicted_lengths.png")
+jpeg(file="outputs/histogram_of_predicted_lengths.png")
 hist(end_of_yolk_sac_period_results$emergence_length, 
      breaks = seq(min(end_of_yolk_sac_period_results$emergence_length), max(end_of_yolk_sac_period_results$emergence_length), length.out = 7),
      main = "length at larval period end",
