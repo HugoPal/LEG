@@ -28,6 +28,7 @@ tibble("fish_ID" = c(seq(1,5,1)),
        "hatchlength" = c(runif(5, min=7.906,max=10.677)),
        "hatchvolume" =c(runif(5, min=5.5, max=11.9)))
 
+
 # FIRST load your data, it must follow data formatting given above
 DATAFRAME <- read_csv("data/DATAFRAME.csv")
 
@@ -84,9 +85,10 @@ end_of_yolk_sac_period_results
 range(end_of_yolk_sac_period_results$emergence_date)
 range(end_of_yolk_sac_period_results$emergence_length)
 
-
 # merge results with dataset
 DATAFRAME<-merge(DATAFRAME, end_of_yolk_sac_period_results, by = "fish_ID", all=T)
+dir.create(file.path("./outputs"))
+
 write.csv(DATAFRAME,
           file = "outputs/DATAFRAME_predicted.csv")
 
@@ -114,7 +116,5 @@ hist(end_of_yolk_sac_period_results$emergence_length,
      main = "length at larval period end",
      xlab = "length (mm)")
 dev.off()
-
-
 
 
