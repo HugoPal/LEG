@@ -39,8 +39,6 @@ DISCLAIMER: as with all predictive models, this tool will predict well if the in
 
 ## Citing
 
-_Describe how to cite your work, typically this is something you can update once your paper is complete and in a journal. You can replace this with a "todo" or reference your preprint in the meantime. Or just state the authors, idk_
-
 The paper is currently in preparation. This section will be updated when it is citable.
 
 ## License
