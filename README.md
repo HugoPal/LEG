@@ -1,6 +1,6 @@
 # LEG: Predicting end of larval period for grayling
 
-LEG tool is a modelling approach for lab-raised European Grayling _Thymallus thymallus_ to predict when an individual will end the larval period and it's length at that point. The repository contains the LEG tool, a data folder that your data will go in, and a models folder containing the three models the tool uses.
+LEGtool is a modelling approach for lab-raised European Grayling _Thymallus thymallus_ to predict when an individual will end the larval period and it's length at that point.
 
 Details of the tool are available in Palejowski et al. (_in prep_)
 
@@ -8,38 +8,36 @@ Details of the tool are available in Palejowski et al. (_in prep_)
 
 ### Prerequisites
 
-The LEGtool was developed using R version 4.0.2.
-It uses the following packages that will be needed to run it:
+LEGtool was developed using R version 4.0.2.
+It uses the following packages:
  - tibble version 3.0.4
  - readr version 1.4.0
 
 To use the tool download the code from the main LEG repository via Download ZIP. 
-Your data must be formatted as a .csv file named DATAFRAME.csv and placed in the data/ directory following the formatting details given in the README.md file there. 
+Your data must be formatted as a .csv file named `DATAFRAME.csv` and placed in the `data/` directory following the formatting details provided in `data/README.md`. 
 
 ### Usage
 
-The tool can then either be run from within R line by line or from the command line. A flow-through user diagram is below.
+The tool provided in `LEGtool_1.4.R` can then either be run using RStudio line by line or from the command line. A flow-through user diagram is below.
 
 ![](images/diagram_user.png)
 
-Palejowski et al (_in prep_) developed two models of yolk sac consumption, model 1 (linear relationship between time and yolk sac consumption, simpler but slightly less accurate) and model 2 (non-linear relationship, more complex but more accurate). Model 1 is used by default, but model 2 can be used by loading "predictor_timing_of_yolk_period_end_b.rds" instead of "predictor_timing_of_yolk_period_end.rds" in line 39 of the R script. Discussion of the two models is in Palejowski et al (_in prep_).
+Palejowski et al (_in prep_) developed two models of yolk sac consumption, model 1 (linear relationship between time and yolk sac consumption, simpler but slightly less accurate) and model 2 (non-linear relationship, more complex but more accurate). Model 1 is used by default, but model 2 can be used by loading `"predictor_timing_of_yolk_period_end_b.rds"` instead of `"predictor_timing_of_yolk_period_end.rds"` in line 39 of `LEGtool_1.4.R`. Discussion of the two models is in Palejowski et al (_in prep_).
 
-Check data formatting, ensure the correct packages are installed, choose which timing predictor model to use, then either run the script from the command line or run line 48 in the R script. This will generate your predicted values, which are then saved later in the script if running line-by-line. Histograms of predicted results are generated and saved lower in the script.
+Verify that the data adheres to the specified formatting, as described in `data/`, ensure the correct packages are installed, choose which timing predictor model to use, then either run `LEGtool_1.4.R` from the command line or run line 48 in RStudio. This will generate your predicted values, which are then saved later in the script if running line-by-line. Histograms of predicted results are generated and saved lower in the script.
 
-The tool generates the following outputs:
+Running LEGtool generates the following outputs, saved in `outputs/`:
 
 | Output | Description | 
 | --- | --- |
-| DATAFRAME_predicted.csv | The original input DATAFRAME.csv file but with two added columns of predicted lengths at larval period end, and of predicted time of larval period end in days post fertilisation. |
-| histogram_of_predicted_times.png | A histogram of the predicted timings of end of larval period, saved as a .png file. |
-| histogram_of_predicted_lengths.png | A histogram of the predicted lengths at end of larval period, saved as a .png file. |
-
-These will all be saved in a folder called LEG/outputs/ which will be created if one does not already exist.
+| `DATAFRAME_predicted.csv` | The original input `DATAFRAME.csv` file but with two added columns of predicted lengths at larval period end, and of predicted time of larval period end in days post fertilisation. |
+| `histogram_of_predicted_times.png` | A histogram of the predicted timings of end of larval period, saved as a .png file. |
+| `histogram_of_predicted_lengths.png` | A histogram of the predicted lengths at end of larval period, saved as a .png file. |
 
 DISCLAIMER: as with all predictive models, this tool will predict well if the input variables are within the range used to train the original model, outside of the below ranges predictions cannot be trusted:
  - fish length at hatching: 8.419-10.677 mm
  - number of days taken to hatch: 30-38
- - yolk sac volume at hatching: 5.5-11.9 mm^3
+ - yolk sac volume at hatching: 5.5-11.9 mm<sup>3</sup>
  - length of experiment: 30-70 days post-fertilisation
 
 ## Citing
