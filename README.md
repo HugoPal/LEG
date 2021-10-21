@@ -13,13 +13,18 @@ It uses the following packages that will be needed to run it:
  - tibble version 3.0.4
  - readr version 1.4.0
 
+To use the tool download the code from the main LEG repository via Download ZIP. 
+Your data must be formatted as a .csv file named DATAFRAME.csv and placed in the data/ directory following the formatting details given in the README.md file there. 
+
 ### Usage
 
-To use the tool download the code from the main LEG repository via Download ZIP. Your data must be formatted as a .csv file named DATAFRAME.csv and placed in the data/ directory following the formatting details given in the README.md file there. The tool can then either be run from within R line by line or from the command line. A flow-through user diagram is below.
+The tool can then either be run from within R line by line or from the command line. A flow-through user diagram is below.
 
 ![](images/diagram_user.png)
 
 Palejowski et al (_in prep_) developed two models of yolk sac consumption, model 1 (linear relationship between time and yolk sac consumption, simpler but slightly less accurate) and model 2 (non-linear relationship, more complex but more accurate). Model 1 is used by default, but can be changed in the R script by changing which model is used for "timing_predictor" in line 39.
+
+Check data formatting, ensure the correct packages are installed, choose which timing predictor model to use, then either run the script from the command line or run line 48 in the R script. This will generate your predicted values, which are then saved later in the script if running line-by-line. Histograms of predicted results are generated and saved lower in the script.
 
 The tool generates the following outputs:
 
