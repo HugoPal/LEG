@@ -18,7 +18,9 @@ Your data must be formatted as a .csv file named `DATAFRAME.csv` and placed in t
 
 ### Usage
 
-The tool provided in `LEGtool_1.4.R` can then either be run using RStudio line by line or from the command line. A flow-through user diagram is below.
+The tool provided in `LEGtool_1.4.R` can then either be run using RStudio line by line or from the command line.
+
+The following diagram illustrates the structure of LEGtool. The input data, processed as described in `data/`, is used as an input to fit the yolk sac consumption model. The user is able to select among two such models (see details below). This model generates the timing of the end of the larval stage for an individual which, combined with the individual's initial input data, is used to fit the growth model and finally predict the length at the end of the larval stage.
 
 ![](images/diagram_user.png)
 
@@ -34,7 +36,7 @@ Running LEGtool generates the following outputs, saved in `outputs/`:
 | `histogram_of_predicted_times.png` | A histogram of the predicted timings of end of larval period, saved as a .png file. |
 | `histogram_of_predicted_lengths.png` | A histogram of the predicted lengths at end of larval period, saved as a .png file. |
 
-DISCLAIMER: as with all predictive models, this tool will predict well if the input variables are within the range used to train the original model, outside of the below ranges predictions cannot be trusted:
+_DISCLAIMER:_ LEGtool has been fitted on input data within the ranges provided below. Input data that includes values outside of these ranges may generate unreliable predictions:
  - fish length at hatching: 8.419-10.677 mm
  - number of days taken to hatch: 30-38
  - yolk sac volume at hatching: 5.5-11.9 mm<sup>3</sup>
