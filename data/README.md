@@ -1,6 +1,6 @@
 Your data will go in this folder, it needs to be formatted as described below or the tool will not work.
 
-The data must be named DATAFRAME.csv and be formatted as a .csv file.
+The data must be named `DATAFRAME.csv` and be formatted as a CSV file.
 
 The data must contain the following columns:
 "fish_ID" - unique identifier for a fish
