@@ -24,9 +24,9 @@ The following diagram illustrates the structure of LEGtool. The input data, proc
 
 ![](images/diagram_user.png)
 
-Palejowski et al (_in prep_) developed two models of yolk sac consumption, model 1 (linear relationship between time and yolk sac consumption, simpler but slightly less accurate) and model 2 (non-linear relationship, more complex but more accurate). Model 1 is used by default, but model 2 can be used by loading `"predictor_timing_of_yolk_period_end_b.rds"` instead of `"predictor_timing_of_yolk_period_end.rds"` in line 39 of `LEGtool_1.4.R`. Discussion of the two models is in Palejowski et al (_in prep_).
+Palejowski et al (_in prep_) developed two models of yolk sac consumption, model 1 (linear relationship between time and yolk sac consumption, simpler but slightly less accurate) and model 2 (non-linear relationship, more complex but more accurate). Model 1 is used by default, but model 2 can be used by loading `"predictor_timing_of_yolk_period_end_b.rds"` instead of `"predictor_timing_of_yolk_period_end.rds"` in line 44 of `LEGtool_1.4.R`. Discussion of the two models is in Palejowski et al (_in prep_).
 
-Verify that the data adheres to the specified formatting, as described in `data/`, ensure the correct packages are installed, choose which timing predictor model to use, then either run `LEGtool_1.4.R` from the command line or run line 48 in RStudio. This will generate your predicted values, which are then saved later in the script if running line-by-line. Histograms of predicted results are generated and saved lower in the script.
+Verify that the data adheres to the specified formatting, as described in `data/`, ensure the correct packages are installed, choose which timing predictor model to use, then either run `LEGtool_1.4.R` from the command line or run line 53 in RStudio. This will generate your predicted values, which are then saved later in the script if running line-by-line. Histograms of predicted results are generated and saved lower in the script.
 
 Running LEGtool generates the following outputs, saved in `outputs/`:
 
