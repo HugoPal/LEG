@@ -13,8 +13,8 @@ It uses the following packages:
  - tibble version 3.0.4
  - readr version 1.4.0
 
-To use the tool download the code from the main LEG repository via Download ZIP. 
-Your data must be formatted as a .csv file named `DATAFRAME.csv` and placed in the `data/` directory following the formatting details provided in `data/README.md`. 
+To use the tool with your own data, you can clone this repository and use the tool as described below. 
+Your data must be formatted as a CSV file named `DATAFRAME.csv` and placed in the `data/` directory following the formatting details provided in `data/README.md`. 
 
 ### Usage
 
@@ -33,8 +33,8 @@ Running LEGtool generates the following outputs, saved in `outputs/`:
 | Output | Description | 
 | --- | --- |
 | `DATAFRAME_predicted.csv` | The original input `DATAFRAME.csv` file but with two added columns of predicted lengths at larval period end, and of predicted time of larval period end in days post fertilisation. |
-| `histogram_of_predicted_times.png` | A histogram of the predicted timings of end of larval period, saved as a .png file. |
-| `histogram_of_predicted_lengths.png` | A histogram of the predicted lengths at end of larval period, saved as a .png file. |
+| `histogram_of_predicted_times.png` | A histogram of the predicted timings of end of larval period, saved as a PNG file. |
+| `histogram_of_predicted_lengths.png` | A histogram of the predicted lengths at end of larval period, saved as a PNG file. |
 
 _DISCLAIMER:_ LEGtool has been fitted on input data within the ranges provided below. Input data that includes values outside of these ranges may generate unreliable predictions:
  - fish length at hatching: 8.419-10.677 mm
