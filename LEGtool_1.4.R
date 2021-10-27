@@ -1,4 +1,5 @@
-### Tool to predict timing of the end of the yolk sac period, and fish length at that point, in grayling, 
+### LEGTool: Larvel End in Grayling
+# this tool predicts the timing of the end of the yolk sac period, and fish length at that point, in grayling, 
 # based on length at hatching, how many days a fish took to hatch, and yolk sac volume at hatching.
 # DISCLAIMER: as with all predictive models, this tool will predict well if the input variables are within 
 # the range used to train the original model, outside of the below ranges predictions cannot be trusted:
