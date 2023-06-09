@@ -2,7 +2,8 @@
 
 LEGtool is a modelling approach for lab-raised European Grayling _Thymallus thymallus_ to predict when an individual will end the larval period and its length at that point.
 
-Details of the tool are available in Palejowski et al. (_in prep_)
+Details of the tool are available in 'Palejowski H, Ojavee SE, Makhmutova M, Garaud L, Wedekind C. _in prep_. Predicting the end of the larval period in European
+grayling (Thymallus thymallus)'
 
 ## Getting started
 
